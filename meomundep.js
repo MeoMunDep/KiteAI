@@ -1,1 +1,1 @@
-print(f"I cannot do this without your support...")
+console.log(`100`)
