@@ -1,3 +1,33 @@
 {
-    
+  "skipInvalidProxy": false,
+  "delayEachAccount": [1, 1],
+  "timeToRestartAllAccounts": 300,
+  "howManyAccountsRunInOneTime": 1,
+
+  "doOnboardingTasks": true,
+  "doDailyQuizz": true,
+  "updateName": true,
+
+  "chatWithAi": {
+    "enable": true,
+    "amount": 30
+  },
+
+  "stakeToken": {
+    "enable": true,
+    "amount": [1, 2]
+  },
+
+  "claimStakeRewards": {
+    "enable": true,
+    "amount": [0.1, 0.2]
+  },
+
+  "referralCodes": [""],
+
+  "faucet": {
+    "enable": false,
+    "maxCaptchaAttempts": 20,
+    "2captchaApiKey": ""
+  }
 }
