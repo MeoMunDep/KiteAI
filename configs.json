@@ -2,7 +2,7 @@
   "skipInvalidProxy": false,
   "delayEachAccount": [1, 1],
   "timeToRestartAllAccounts": 300,
-  "howManyAccountsRunInOneTime": 1,
+  "howManyAccountsRunInOneTime": 100,
 
   "doOnboardingTasks": true,
   "doDailyQuizz": true,
@@ -12,6 +12,8 @@
     "enable": true,
     "amount": 30
   },
+
+  "claimBadges": true,
 
   "stakeToken": {
     "enable": true,
@@ -23,7 +25,7 @@
     "amount": [0.1, 0.2]
   },
 
-  "referralCodes": [""],
+  "referralCodes": ["DO6Y47C3"],
 
   "faucet": {
     "enable": false,
