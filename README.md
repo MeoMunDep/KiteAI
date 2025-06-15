@@ -121,48 +121,6 @@ This file controls the bot’s behavior. Below is an example configuration:
   }
 }
 ```
-
-- **Fields Explained:**
-  Here's your updated configuration with the new structure and values, along with the original field explanations updated accordingly:
-
-```json
-{
-  "skipInvalidProxy": false,
-  "delayEachAccount": [1, 1],
-  "timeToRestartAllAccounts": 300,
-  "howManyAccountsRunInOneTime": 100,
-
-  "doOnboardingTasks": true,
-  "doDailyQuizz": true,
-  "updateName": true,
-
-  "chatWithAi": {
-    "enable": true,
-    "amount": 30
-  },
-
-  "claimBadges": true,
-
-  "stakeToken": {
-    "enable": true,
-    "amount": [1, 2]
-  },
-
-  "claimStakeRewards": {
-    "enable": true,
-    "amount": [0.1, 0.2]
-  },
-
-  "referralCodes": ["DO6Y47C3"],
-
-  "faucet": {
-    "enable": false,
-    "maxCaptchaAttempts": 20,
-    "2captchaApiKey": ""
-  }
-}
-```
-
 ### Field Descriptions:
 
 - `skipInvalidProxy`: Skip invalid proxies if `true`.
