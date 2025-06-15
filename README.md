@@ -1,4 +1,4 @@
-# 🚀 Bot Setup Instructions
+## 🚀 Bot Setup Instructions
 
 Welcome to the bot setup guide! Follow the steps below to install and configure the bot correctly. This guide is designed to be beginner-friendly, with clear explanations for each step.
 
@@ -11,9 +11,10 @@ Welcome to the bot setup guide! Follow the steps below to install and configure 
 1. [Prerequisites](#prerequisites)
 2. [Installation Steps](#installation-steps)
 3. [Configuration Files](#configuration-files)
-   - [`configs.json`](#1-configsjson)
-   - [`privateKeys.txt`](#2-privateKeystxt)
-   - [`proxies.txt`](#4-proxiestxt)
+
+   * [`configs.json`](#1-configsjson)
+   * [`privateKeys.txt`](#2-privateKeystxt)
+   * [`proxies.txt`](#3-proxiestxt)
 4. [Running the Bot](#running-the-bot)
 5. [Contact and Support](#contact-and-support)
 
@@ -21,62 +22,68 @@ Welcome to the bot setup guide! Follow the steps below to install and configure 
 
 ## Prerequisites
 
+<details>
+<summary>Click to expand</summary>
+
 Before running the bot, make sure you have the following installed:
 
-- **Node.js** (Version: `22.11.0`)
-- **npm** (Version: `10.9.0`)
+* **Node.js** (Version: `22.11.0`)
+* **npm** (Version: `10.9.0`)
 
 Download Node.js and npm here: [Download Link](https://t.me/KeoAirDropFreeNe/257/1462).
 
--> On Windows, double click on `run.bat`. For Linux/macOS, use `run.sh` to automatically run the bot. Remember to fill in all the necessary details before running.
+👉 On Windows, double click on `run.bat`.
+👉 For Linux/macOS, use `run.sh` to automatically run the bot.
+
+> ⚠️ *Remember to fill in all the necessary details before running.*
+
+</details>
 
 ---
 
 ## Installation Steps
 
+<details>
+<summary>Step-by-step instructions</summary>
+
 ### 1. **Clone the Bot Repository (GitHub)**
 
-You can clone the bot repository using Git. If you don't have Git installed, [install Git here](https://git-scm.com/).
+```bash
+git clone https://github.com/MeoMunDep/kiteai.git
+cd kiteai
+```
 
-- Open your terminal (Command Prompt on Windows, Terminal on Linux/macOS) and navigate to the folder where you want to store the bot files.
-
-- Run the following command to clone the repository:
-
-  ```bash
-  git clone https://github.com/MeoMunDep/kiteai.git
-  ```
-
-- After cloning, navigate into the bot's directory:
-
-  ```bash
-  cd kiteai
-  ```
-
-### 2. **Install Dependencies:**
-
-- Once inside the bot directory, install the necessary dependencies by running the following command:
+### 2. **Install Dependencies**
 
 ```bash
 npm install --force user-agents axios meo-forkcy-colors meo-forkcy-utils https-proxy-agent socks-proxy-agent ethers web3 crypto-js @faker-js/faker viem
 ```
 
-- If you're on **Windows** and encounter an Execution Policy error, run:
+<details>
+<summary>⚠️ Windows Execution Policy Error?</summary>
+
+Run this PowerShell command:
 
 ```bash
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
-Then, run the npm install command again.
+Then try `npm install` again.
 
-- For **Linux/macOS**, if you face permission issues with the install command, prepend `sudo` to the command:
+</details>
+
+<details>
+<summary>🐧 Linux/macOS Permission Error?</summary>
+
+Try with `sudo`:
 
 ```bash
 sudo npm install --force user-agents axios meo-forkcy-colors meo-forkcy-utils https-proxy-agent socks-proxy-agent ethers web3 crypto-js viem
 ```
 
-### 3. **Prepare Configuration Files:**
+</details>
 
-- Ensure all configuration files are set up correctly before running the bot (see [Configuration Files](#configuration-files) section).
+</details>
 
 ---
 
@@ -84,7 +91,8 @@ sudo npm install --force user-agents axios meo-forkcy-colors meo-forkcy-utils ht
 
 ### 1. `configs.json` - 📜 Adjust Bot Settings
 
-This file controls the bot’s behavior. Below is an example configuration:
+<details>
+<summary>Click to view example and explanation</summary>
 
 ```json
 {
@@ -121,89 +129,102 @@ This file controls the bot’s behavior. Below is an example configuration:
   }
 }
 ```
-### Field Descriptions:
 
-- `skipInvalidProxy`: Skip invalid proxies if `true`.
-- `delayEachAccount`: Delay between each account's action, in seconds (random between the two values).
-- `timeToRestartAllAccounts`: Time (in seconds) to restart all accounts.
-- `howManyAccountsRunInOneTime`: Number of accounts to process simultaneously.
-- `doOnboardingTasks`: Enable onboarding task flow.
-- `doDailyQuizz`: Enable daily quiz participation.
-- `updateName`: Enable random username updates.
-- `chatWithAi.enable`: Whether to chat with AI.
-- `chatWithAi.amount`: Number of messages to send when chatting with AI.
-- `claimBadges`: Enable badge claiming.
-- `stakeToken.enable`: Enable token staking.
-- `stakeToken.amount`: Random stake amount range.
-- `claimStakeRewards.enable`: Enable claiming of staking rewards.
-- `claimStakeRewards.amount`: Random range of reward to claim.
-- `referralCodes`: Add your referral code. (Thanks for supporting ^^)
-- `faucet.enable`: Enable faucet claim mode.
-- `faucet.maxCaptchaAttempts`: Maximum CAPTCHA attempts allowed.
-- `faucet.2captchaApiKey`: 2Captcha API key for solving CAPTCHAs.
+**Field Descriptions:**
 
-### 2. `privateKeys.txt` - 🗂️ User's Wallet Data
+* `skipInvalidProxy`: Skip invalid proxies if `true`.
+* `delayEachAccount`: Delay between accounts (random between two numbers).
+* `timeToRestartAllAccounts`: Time (in seconds) to restart all.
+* `howManyAccountsRunInOneTime`: Parallel accounts.
+* `doOnboardingTasks`: Enable onboarding task flow.
+* `doDailyQuizz`: Enable daily quiz participation.
+* `updateName`: Enable random username updates.
+* `chatWithAi.enable`: Whether to chat with AI.
+* `chatWithAi.amount`: Number of messages to send.
+* `stakeToken.enable`: Enable staking.
+* `stakeToken.amount`: Random stake range.
+* `claimStakeRewards.enable`: Claim staking rewards.
+* `claimStakeRewards.amount`: Reward range to claim.
+* `referralCodes`: Add your referral code.
+* `faucet.enable`: Enable faucet mode.
+* `faucet.maxCaptchaAttempts`: Max CAPTCHA attempts.
+* `faucet.2captchaApiKey`: 2Captcha API key.
 
-- Wallets generator: [Link](https://github.com/MeoMunDep/Automatic-Ultimate-Create-Wallets-for-Airdrop)
+</details>
+
+---
+
+### 2. `privateKeys.txt` - 🗂️ Wallet Data
+
+<details>
+<summary>Click to expand</summary>
+
+You can generate wallets using: [Wallet Generator Tool](https://github.com/MeoMunDep/Automatic-Ultimate-Create-Wallets-for-Airdrop)
 
 ```txt
-privatekey
-privatekey
-privatekey
+privatekey1
+privatekey2
+privatekey3
 ```
 
-_Note: Each row for each account._
+> Each line = one wallet.
+
+</details>
+
+---
 
 ### 3. `proxies.txt` - 🌐 Proxy List (Optional)
 
-If you are using proxies, add them here. Leave the file blank if you are not using proxies. Supported formats:
+<details>
+<summary>Supported Formats & Example</summary>
 
-- [Get it from here](https://www.webshare.io/?referral_code=4l5kb3glsce7)
+Get proxies from: [Webshare](https://www.webshare.io/?referral_code=4l5kb3glsce7)
 
 ```txt
 http://host:port
 https://host:port
 socks4://host:port
 socks5://host:port
-http://user:password@host:port
-https://user:password@host:port
-socks4://user:password@host:port
-socks5://user:password@host:port
+http://user:pass@host:port
+socks5://user:pass@host:port
 ```
 
-_Note: each row for each account._
+> Leave blank if not using proxies.
+
+</details>
 
 ---
 
 ## Running the Bot
 
-1. Navigate to the folder containing the bot files:
+<details>
+<summary>Launch the bot</summary>
 
-   ```bash
-   cd /path/to/kiteai
-   ```
+```bash
+cd /path/to/kiteai
+node meomundep.js
+```
 
-2. Run the bot using the following command:
-
-   ```bash
-   node meomundep.js
-   ```
+</details>
 
 ---
 
 ## Contact and Support
 
-- **Support me via** [Referral Link](https://testnet.gokite.ai/?referralCode=DO6Y47C3)
-- **Support me via Donate** [Here](https://t.me/KeoAirDropFreeNe/312/27801)
-- **Contact for work:** [Telegram](https://t.me/MeoMunDep)
-- **Join the support group:** [Join here](https://t.me/KeoAirDropFreeNe)
-- **Updates Channel:** [View channel](https://t.me/KeoAirDropFreeNee)
-- **YouTube Channel:** [Watch here](https://www.youtube.com/@keoairdropfreene)
-- **Instagram:** [Follow me](https://www.instagram.com/meomundep)
-- **Tiktok:** [Follow me](https://www.tiktok.com/@meomundep)
+<details>
+<summary>Expand to see all support links</summary>
 
-Your support is greatly appreciated! 🐱
+* 🧡 **Support via referral:** [Click here](https://testnet.gokite.ai/?referralCode=DO6Y47C3)
+* ☕ **Donate:** [Link](https://t.me/KeoAirDropFreeNe/312/27801)
+* 💬 **Telegram Contact:** [@MeoMunDep](https://t.me/MeoMunDep)
+* 📣 **Support Group:** [Join here](https://t.me/KeoAirDropFreeNe)
+* 🔔 **Updates Channel:** [View](https://t.me/KeoAirDropFreeNee)
+* 📺 **YouTube Channel:** [Watch](https://www.youtube.com/@keoairdropfreene)
+* 📸 **Instagram:** [meomundep](https://www.instagram.com/meomundep)
+* 🎵 **Tiktok:** [meomundep](https://www.tiktok.com/@meomundep)
+
+</details>
 
 ---
 
-Enjoy using the bot! 🚀
+🚀 **Enjoy using the bot and thank you for your support!**
