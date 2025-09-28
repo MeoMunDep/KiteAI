@@ -131,9 +131,10 @@ print_green "Configuration files have been checked."
 
 print_yellow "Checking dependencies..."
 cd "$MODULES_DIR"
-npm install user-agents axios meo-forkcy-colors meo-forkcy-utils meo-forkcy-proxy ethers web3 viem crypto-js @faker-js/faker
+npm install user-agents axios meo-forkcy-colors meo-forkcy-utils meo-forkcy-proxy meo-forkcy-logger ethers web3 viem crypto-js @faker-js/faker
 cd - > /dev/null
 print_green "Dependencies installation completed!"
 
 print_green "Starting the bot..."
 node meomundep
+
