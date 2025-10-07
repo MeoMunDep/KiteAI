@@ -56,7 +56,7 @@ cd kiteai
 ### 2. **Install Dependencies**
 
 ```bash
-npm install --force user-agents axios meo-forkcy-colors meo-forkcy-utils https-proxy-agent socks-proxy-agent ethers web3 crypto-js @faker-js/faker viem
+npm install --force user-agents axios meo-forkcy-colors meo-forkcy-utils meo-forkcy-proxy meo-forkcy-logger ethers web3 crypto-js @faker-js/faker viem
 ```
 
 <details>
